@@ -1,0 +1,20 @@
+<?php
+$GIFS = [
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/badass/skate-rope.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/bboy/bboy-bear.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/boom/atomic_bomb.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/boom/cat-explosion.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/boom/drop-the-mic.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/contempt/Dwight-Schrute-look-of-disapproval.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/contempt/simon-cowel-glazed-look.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/hacking/typity-type.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/fail/ice-jump.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/fail/kayak-diving.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/web-dev/family-guy-css.gif",
+    "https://raw.githubusercontent.com/jglovier/gifs/gh-pages/why-you/i-see-what-you-did-there.gif",
+    "http://i.imgur.com/bAaK3OE.gif",
+    "http://i.imgur.com/KGmyQqG.gif",
+    "https://media.giphy.com/media/3oEduZn51wiKd2C2FW/giphy.gif",
+    "http://i.imgur.com/v31dcR0.gif",
+    "https://33.media.tumblr.com/38066b35831130943dd45a0f2fe5ce7a/tumblr_n40gu1hTYy1sh0yuao1_500.gif",
+];

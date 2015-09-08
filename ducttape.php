@@ -1,5 +1,7 @@
 <?php
 require_once("config.php");
+require_once("github.php");
+require_once("gifs.php");
 
 $config = null;
 foreach($REPOS as $repo => $repo_config) {
@@ -13,9 +15,13 @@ if (!$config || "sha1=" . hash_hmac("sha1", $body, $config["secret"]) !== $_SERV
     die("404?");
 }
 
-$body = json_decode($body);
+$body = json_decode($body, true);
 if ($body["pull_request"]["base"]["ref"] === "production") {
+    if ($body['action'] === "opened") {
+        postComment($body['pull_request']['url'], "**Notice**: This will go live on the website as soon as the pull request is closed.\n\nPlease ensure this has been tested properly on `master`.\n\nYou sho    uld not accept this PR by yourself. Someone else should accept it, preferably after reading it.");
+    }
     if ($body["action"] === "closed" && $body["pull_request"]["merged"] === true) {
-        system($repo_config["cmd"]);
+        shell_exec($config["cmd"]);
+        postComment($body['pull_request']['url'], "Deployed successfully. Please check your changes on " . $config['url'] . "\n<img src=\"" . $GIFS[array_rand($GIFS)] . "\">");
     }
 }
