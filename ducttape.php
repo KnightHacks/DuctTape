@@ -19,6 +19,11 @@ $body = json_decode($body, true);
 if ($body["pull_request"]["base"]["ref"] === "production") {
     if ($body['action'] === "opened") {
         postComment($body['pull_request']['url'], "**Notice**: This will go live on the website as soon as the pull request is closed.\n\nPlease ensure this has been tested properly on `master`.\n\nYou sho    uld not accept this PR by yourself. Someone else should accept it, preferably after reading it.");
+        if ($config["lint_cmd"]) {
+            updateCommitStatus($body['pull_request'], 'pending');
+
+            $output = shell_exec($config["cmd"]);
+        }
     }
     if ($body["action"] === "closed" && $body["pull_request"]["merged"] === true) {
         shell_exec($config["cmd"]);
