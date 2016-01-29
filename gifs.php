@@ -17,4 +17,5 @@ $GIFS = [
     "https://media.giphy.com/media/3oEduZn51wiKd2C2FW/giphy.gif",
     "http://i.imgur.com/v31dcR0.gif",
     "https://33.media.tumblr.com/38066b35831130943dd45a0f2fe5ce7a/tumblr_n40gu1hTYy1sh0yuao1_500.gif",
+    "http://tclhost.com/XFDY0sd.gif"
 ];
